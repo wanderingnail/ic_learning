@@ -9,17 +9,19 @@ SHOW_WAVE=${SHOW_WAVE:-"false"}
 WAVE_SBIN=wave.sbin
 WAVE_LXT=wave.vcd
 BUILD_DIR=build
-GFLAGS="-S ../gtkw.tcl"
+GFLAGS="-S ../../gtkw.tcl"
 
-mkdir -p $BUILD_DIR
-cd $BUILD_DIR
+mkdir -p arbiter/$BUILD_DIR
+cd arbiter/$BUILD_DIR
 
 # Simulation
-for TB in `ls ../sim/tb*.v`
+for TB in `ls ../../arbiter/sim/tb*.v`
 do
-    iverilog -v -g2012 -Wall -Winfloop -o $WAVE_SBIN -I ../rtl -y ../rtl $TB
+    iverilog -v -g2012 -Wall -Winfloop -o $WAVE_SBIN -I ../../arbiter/rtl -y ../../arbiter/rtl $TB
     vvp -v -N -lxt2 $WAVE_SBIN
 done
+
+gtkwave hs_round_robin.vcd
 
 # if [ "$SHOW_WAVE" = "true" ]; then
 #     GTKWAVE_PID=`pgrep gtkwave || echo "none"`
