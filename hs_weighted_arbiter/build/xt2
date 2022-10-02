@@ -1,0 +1,36 @@
+Compiling VVP ...
+ ... VVP file version 12.0 (devel) (s20150603-1539-g2693dd32b)
+Compile cleanup...
+ ...       48 functors (net_fun pool=524288 bytes)
+                 15 logic
+                  0 bufif
+                  0 resolv
+                 15 signals
+ ...       41 filters (net_fil pool=524288 bytes)
+ ...      870 opcodes (24576 bytes)
+ ...       43 nets
+ ...       48 vvp_nets (1048544 bytes)
+ ...        0 arrays (0 words)
+ ...        2 memories
+                  2 logic (16 words)
+                  0 real (0 words)
+ ...       16 scopes
+Running ...
+ ...execute EndOfCompile callbacks
+ ...propagate initialization events
+ ...execute StartOfSim callbacks
+ ...run scheduler
+VCD info: dumpfile hs_round_robin.vcd opened for output.
+VCD warning: $dumpvars: Package ($unit) is not dumpable with VCD.
+../../arbiter/sim/tb_arbiter.v:38: $finish called at 2003 (1s)
+ ...execute Postsim callbacks
+Event counts:
+         404 time steps (pool=113)
+         860 thread schedule events
+         945 assign events
+             ...assign(vec4) pool=9362
+             ...assign(vec8) pool=204
+             ...assign(real) pool=256
+             ...assign(word) pool=128
+             ...assign(word/r) pool=204
+        1126 other events (pool=4096)
