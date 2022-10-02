@@ -8,10 +8,10 @@ reg                        rst_n;
 
 reg  [DATA_BW+ADDR_BW : 0] cmd_in;
 reg                        cmd_vld;
-wire [DATA_BW-1 : 0]       prdata;
-wire                       pready;
 wire                       cmd_rdy;
 
+wire [DATA_BW-1 : 0]       prdata;
+wire                       pready;
 wire                       psel;
 wire                       penable;
 wire                       pwrite;

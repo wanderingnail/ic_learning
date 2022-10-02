@@ -4,6 +4,7 @@ module apb_rx #(
 )(
     input                  clk,
     input                  rst_n,
+    
     input                  psel,
     input                  penable,
     input                  pwrite,

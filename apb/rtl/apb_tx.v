@@ -4,11 +4,13 @@ module apb_tx #(
 )(
     input                        clk,
     input                        rst_n,
+    
     input  [DATA_BW+ADDR_BW : 0] cmd_in,
     input                        cmd_vld,
+    output                       cmd_rdy,
+
     input  [DATA_BW-1 : 0]       prdata,
     input                        pready,
-    output                       cmd_rdy,
     output                       psel,
     output                       penable,
     output                       pwrite,
