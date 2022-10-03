@@ -1,0 +1,36 @@
+Compiling VVP ...
+ ... VVP file version 12.0 (devel) (s20150603-1539-g2693dd32b)
+Compile cleanup...
+ ...      432 functors (net_fun pool=524288 bytes)
+                113 logic
+                  0 bufif
+                  4 resolv
+                215 signals
+ ...      341 filters (net_fil pool=524288 bytes)
+ ...    10702 opcodes (270336 bytes)
+ ...      269 nets
+ ...      432 vvp_nets (1048544 bytes)
+ ...        0 arrays (0 words)
+ ...        5 memories
+                  5 logic (8390272 words)
+                  0 real (0 words)
+ ...       51 scopes
+Running ...
+ ...execute EndOfCompile callbacks
+ ...propagate initialization events
+ ...execute StartOfSim callbacks
+ ...run scheduler
+VCD info: dumpfile spi_flash.vcd opened for output.
+VCD warning: $dumpvars: Package ($unit) is not dumpable with VCD.
+../../SPI_FLASH_CONTROLLER/sim/tb_spi_flash.v:43: $finish called at 8150030 (100ps)
+ ...execute Postsim callbacks
+Event counts:
+      131518 time steps (pool=113)
+      403864 thread schedule events
+      197981 assign events
+             ...assign(vec4) pool=9362
+             ...assign(vec8) pool=204
+             ...assign(real) pool=256
+             ...assign(word) pool=128
+             ...assign(word/r) pool=204
+      529388 other events (pool=4096)
