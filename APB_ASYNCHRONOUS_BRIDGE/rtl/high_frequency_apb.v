@@ -79,7 +79,7 @@ always @(posedge a_pclk or negedge a_prst_n) begin
         a_pready_r <= 1'b1;
     end
     else if (a_psel) begin
-        a_prdata_r <= 1'b0;
+        a_pready_r <= 1'b0;
     end
     if (b2a_ready_req_edge) begin
         a_pready_r <= 1'b1;
