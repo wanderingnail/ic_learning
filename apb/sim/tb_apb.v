@@ -30,7 +30,7 @@ initial begin
 end
 
 initial begin
-    clk = 0;
+    clk = 1'b0;
     forever begin
         #5;
         clk = ~clk;
@@ -38,9 +38,9 @@ initial begin
 end
 
 initial begin
-    rst_n = 0;
+    rst_n = 1'b0;
     #3;
-    rst_n = 1;
+    rst_n = 1'b1;
     #1000;
     $finish;
 end
