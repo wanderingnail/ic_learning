@@ -1,4 +1,4 @@
-`timescale 100ns / 1ns
+`timescale 1ns / 1ns
 module tb_asyn_bridge;
 
 localparam ADDR_WD = 8,
