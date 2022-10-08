@@ -85,7 +85,7 @@ wire [AW-1 : 0] next_rd_addr;
 
 wire awfire = S_AXI_AWVALID  && S_AXI_AWREADY;
 wire wfire  = S_AXI_WVALID   && S_AXI_WREADY;
-wire arfire  = S_AXI_ARVALID && S_AXI_ARREADY;
+wire arfire = S_AXI_ARVALID  && S_AXI_ARREADY;
 wire rfire  = S_AXI_RVALID   && S_AXI_RREADY;
 wire b_pend = S_AXI_BVALID   && !S_AXI_BREADY;
 wire r_pend = S_AXI_RVALID   && !S_AXI_RREADY;
@@ -197,7 +197,7 @@ assign S_AXI_BID     = axi_bid;
 always @(posedge S_AXI_ACLK) begin
     if (S_AXI_ARREADY) begin
         araddr  <= S_AXI_ARADDR;
-        arid    <= S_AXI_ARID
+        arid    <= S_AXI_ARID;
         arburst <= S_AXI_ARBURST;
         arlen   <= S_AXI_ARLEN;
         arsize  <= S_AXI_ARSIZE;
@@ -244,7 +244,7 @@ always @(posedge S_AXI_ACLK) begin
     else if (rfire) begin
         axi_rvalid <= (cur_rlen > 0);
     end
-
+end
 
 // axi_rlast
 always @(posedge S_AXI_ACLK) begin
@@ -286,7 +286,6 @@ assign S_AXI_RVALID  = axi_rvalid;
 assign S_AXI_RLAST   = axi_rlast;
 assign S_AXI_RID     = axi_rid;
 assign S_AXI_RRESP   = 2'b00;
-
 
 endmodule
 
