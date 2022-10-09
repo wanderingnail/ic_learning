@@ -96,7 +96,7 @@ wire r_pend = S_AXI_RVALID   && !S_AXI_RREADY;
 always @(posedge S_AXI_ACLK) begin
     if (S_AXI_AWREADY) begin
         awaddr  <= S_AXI_AWADDR;
-        awid    <= S_AXI_AWID
+        awid    <= S_AXI_AWID;
         awburst <= S_AXI_AWBURST;
         awlen   <= S_AXI_AWLEN;
         awsize  <= S_AXI_AWSIZE;

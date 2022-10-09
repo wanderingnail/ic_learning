@@ -35,7 +35,7 @@ initial begin
     rst_n = 0;
     #3;
     rst_n = 1;
-    #815000;
+    #40000;
     $finish;
 end
 

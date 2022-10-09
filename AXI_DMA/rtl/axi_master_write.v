@@ -205,7 +205,7 @@ always @(posedge M_AXI_ACLK) begin
     else if (!w_busy) begin 
         awburst <= w_cmd_burst;
         awsize  <= w_cmd_size;
-        awlent  <= w_cmd_len[ADDRLSB + : AWT];
+        awlent  <= w_cmd_len[AW-1 : ADDRLSB];
         awid    <= w_cmd_id;
         awaddr  <= w_cmd_addr;
 
@@ -228,7 +228,7 @@ end
 always @(posedge M_AXI_ACLK) begin
     if (!w_busy) begin
         aw_needs_alignment <= 1'b0;
-        if (|w_cmd_addr[ADDRLSB + : LGMAXBURST]) begin
+        if (|w_cmd_addr[(ADDRLSB+LGMAXBURST-1) : ADDRLSB]) begin
             if (|w_cmd_len[AW-1 : (LGMAXBURST+ADDRLSB)]) begin
                 aw_needs_alignment <= 1'b1;
             end
