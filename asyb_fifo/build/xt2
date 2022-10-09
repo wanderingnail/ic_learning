@@ -1,0 +1,36 @@
+Compiling VVP ...
+ ... VVP file version 12.0 (devel) (s20150603-1539-g2693dd32b)
+Compile cleanup...
+ ...       77 functors (net_fun pool=524288 bytes)
+                 24 logic
+                  0 bufif
+                  0 resolv
+                 16 signals
+ ...       63 filters (net_fil pool=524288 bytes)
+ ...      162 opcodes (24576 bytes)
+ ...       63 nets
+ ...       77 vvp_nets (1048544 bytes)
+ ...        0 arrays (0 words)
+ ...        1 memories
+                  1 logic (16 words)
+                  0 real (0 words)
+ ...        7 scopes
+Running ...
+ ...execute EndOfCompile callbacks
+ ...propagate initialization events
+ ...execute StartOfSim callbacks
+ ...run scheduler
+VCD info: dumpfile asyn_fifo.vcd opened for output.
+VCD warning: $dumpvars: Package ($unit) is not dumpable with VCD.
+../../asyn_fifo/sim/tb_asyn_fifo.v:48: $finish called at 402 (1s)
+ ...execute Postsim callbacks
+Event counts:
+         192 time steps (pool=113)
+         591 thread schedule events
+         576 assign events
+             ...assign(vec4) pool=9362
+             ...assign(vec8) pool=204
+             ...assign(real) pool=256
+             ...assign(word) pool=128
+             ...assign(word/r) pool=204
+         733 other events (pool=4096)
